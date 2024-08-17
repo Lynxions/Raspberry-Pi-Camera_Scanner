@@ -25,12 +25,12 @@ def display_qr(filename):
 
 def send_qr():
     filename = "send_qr.png"
-    generate_qr("Send / Gửi Hàng", filename)
+    generate_qr("Send Package, filename)
     display_qr(filename)
 
 def receive_qr():
     filename = "receive_qr.png"
-    generate_qr("Receive / Nhận Hàng", filename)
+    generate_qr("Receive Package", filename)
     display_qr(filename)
 
 # Create the main Tkinter window
@@ -44,11 +44,11 @@ root.attributes('-fullscreen', True)
 root.bind('<Escape>', lambda e: root.destroy())
 
 # Create and pack the "Send / Gửi Hàng" button
-send_button = tk.Button(root, text="Send / Gửi Hàng", command=send_qr, font=("Helvetica", 16))
+send_button = tk.Button(root, text="Send Package", command=send_qr, font=("Helvetica", 16))
 send_button.pack(pady=20)
 
 # Create and pack the "Receive / Nhận Hàng" button
-receive_button = tk.Button(root, text="Receive / Nhận Hàng", command=receive_qr, font=("Helvetica", 16))
+receive_button = tk.Button(root, text="Receive Package", command=receive_qr, font=("Helvetica", 16))
 receive_button.pack(pady=20)
 
 # Run the Tkinter event loop
